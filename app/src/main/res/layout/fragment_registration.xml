@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    tools:context=".RegistrationFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+     >
+
+
+            <ImageView
+                android:id="@+id/logoView"
+                android:layout_width="211dp"
+                android:layout_height="171dp"
+                android:layout_marginTop="28dp"
+                android:src="@drawable/logo0412"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/logoText"
+                android:layout_width="206dp"
+                android:layout_height="52dp"
+                android:layout_marginTop="8dp"
+                android:text="WorldCinema"
+                android:textColor="#EF3A01"
+                android:textSize="34sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.512"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/logoView" />
+
+            <EditText
+                android:id="@+id/name_reg_input"
+                android:layout_width="340dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="32dp"
+                android:background="@color/white"
+                android:hint="Имя"
+                android:inputType="text"
+                android:paddingLeft="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/logoText" />
+
+            <EditText
+                android:id="@+id/surmane_reg_input"
+                android:layout_width="340dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/white"
+                android:hint="Фамилия"
+                android:inputType="text"
+                android:paddingLeft="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.507"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name_reg_input" />
+
+            <Button
+                android:id="@+id/registrationButton"
+                android:layout_width="340dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="#EF3A01"
+                android:text="Зарегестрироваться"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPasswordRepeat" />
+
+            <Button
+                android:id="@+id/goToLoginButton"
+                android:layout_width="340dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/black"
+                android:shadowColor="#AFAFAF"
+                android:shadowDx="@integer/material_motion_duration_long_1"
+                android:text="У меня уже есть аккаунт"
+                android:textColor="#EF3A01"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/registrationButton" />
+
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="340dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/white"
+                android:ems="10"
+                android:hint="E-mail"
+                android:paddingLeft="12dp"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/surmane_reg_input" />
+
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="340dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/white"
+                android:ems="10"
+                android:hint="Пароль"
+                android:paddingLeft="12dp"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
+
+            <EditText
+                android:id="@+id/editTextPasswordRepeat"
+                android:layout_width="340dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/white"
+                android:ems="10"
+                android:paddingLeft="12dp"
+                android:hint="Повторить пароль"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>
