@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
+import com.example.test04122022.databinding.FragmentLoginBinding
+import com.example.test04122022.databinding.FragmentRegistrationBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,6 +24,9 @@ class RegistrationFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private var _binding: FragmentRegistrationBinding? = null
+    private val binding get() = _binding!!
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -34,9 +40,19 @@ class RegistrationFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_registration, container, false)
+        _binding = FragmentRegistrationBinding.inflate(inflater, container, false)
+        return binding.root
     }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.registrationButton.setOnClickListener {
+            findNavController().navigate(R.id.action_registrationFragment_to_mainFragment)
+        }
 
+        binding.goToLoginButton.setOnClickListener {
+            findNavController().navigate(R.id.action_registrationFragment_to_loginFragment)
+        }
+    }
     companion object {
         /**
          * Use this factory method to create a new instance of
